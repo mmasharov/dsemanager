@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>DSManager</title>
+</head>
+<body>
+    <h1>DigitalSignage Equipment Manager</h1>
+    <header class="header">
+        <div class="container">
+            <h2>Главное меню</h2>
+            <ul class="header__menu">
+                <li class="header__menu_item">Объекты</li>
+                <li class="header__menu_item">Оборудование</li>
+                <li class="header__menu_item">Администрирование</li>
+            </ul>
+        </div>
+    </header>
+    <section class="store" id="store">
+        <div class="container">
+            <div class="gridwrapper">
+                <div class="store__menu">
+                    <h4>Список объектов</h4>
+                    <input id="search-input" type="text">
+                    <button id="search-btn">Search</button>
+                    <div class="store__list">
+                        <div class="store__list_item">
+                            <span>ID</span>
+                            <span>Название</span>
+                            <!-- Generated content here -->
+                        </div>
+                    </div>
+                    <div class="store__list_control">
+                        <button class="btn__control" id="storeListPrev"><-</button>
+                        <span id="storesPage">1</span>
+                        <button class="btn__control" id="storeListNext">-></button>
+                    </div>
+                </div>
+                <div class="store__info">
+                    <h4>Сведения об объекте с ID: <span id="store_id"><i>Выберите объект в списке слева</i></span></h4>
+                    <div class="store__info_wrapper">
+                        <div class="store__info_text"><span>Код: </span><span id="store_code"></span></div>
+                        <div class="store__info_text store__info_text-name"><span>Название: </span><span id="store_name"></span></div>
+                        <div class="store__info_text"><span>Юрлицо: </span><span id="store_org"></span></div>
+                        <div class="store__info_text store__info_text-type"><span>Тип: </span><span id="store_type"></span></div>
+                        <div class="store__info_img" id="store_photo">
+                            <img src="storage/default-store.jpg" alt="Default Store Image">
+                        </div>
+                        <div class="store__info_text store__info_text-city"><span>Город: </span><span id="store_city"></span></div>
+                        <div class="store__info_text store__info_text-address"><span>Адрес: </span><span id="store_address"></span></div>
+                        <div class="store__info_text store__info_text-phone"><span>Телефон: </span><span id="store_phone"></span></div>
+                        <div class="store__info_text"><span>Добавочный: </span><span id="store_phone_add"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="overlay">
+        <div class="modal" id="store-gallery">
+            <div>Фотографии объекта {ID}</div>
+            <div class="modal__close">Close</div>
+            <div class="modal__image"><img src="storage/stores/2/file_25798.jpg" alt="store image"></div>
+            <div class="modal__control">
+                <button id="gallery-prev"><-</button><button id="gallery-next">-></button>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

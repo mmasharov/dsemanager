@@ -1,0 +1,17 @@
+.header {
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        &_item {
+            display: block;
+            width: 200px;
+            height: 25px;
+            border: 1px dotted black;
+            text-align: center;
+            font-weight: 700;
+            line-height: 20px;
+            cursor: pointer;
+        }
+    }
+}

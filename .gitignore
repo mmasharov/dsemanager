@@ -1,0 +1,11 @@
+# Packages
+/node_modules/
+
+# Virtual Environments
+/.venv/
+
+# Python cache
+__pycache__/
+
+# Database
+/dsm.sqlite
